@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias - Financia Fácil</title>
+<link rel="stylesheet" href="css/categorias.css">
+</head>
+<body>
+    <div class="pagina-categorias">
+        <header class="topo-pagina">
+            <div class="logo-pagina">
+                <h1>Financia Fácil</h1>
+            </div>
+            <nav class="menu-pagina">
+                <a href="paginainicial.html" class="item-menu">Início</a>
+                <a href="transacoes.html" class="item-menu">Transações</a>
+                <a href="orcamentos.html" class="item-menu">Orçamentos</a>
+                <a href="projecoes.html" class="item-menu">Projeções</a>
+                <a href="relatorios.html" class="item-menu">Relatórios</a>
+                <a href="metas.html" class="item-menu">Metas</a>
+                <a href="contas.html" class="item-menu">Contas</a>
+                <a href="economias.html" class="item-menu">Economia</a>
+                <a href="duvidas.html" class="item-menu">Dúvidas</a>
+                <a href="analise-gastos.html" class="item-menu">Gastos</a>
+                <a href="categorias.html" class="item-menu ativo">Categorias</a>
+                <a href="configuracoes.html" class="item-menu">Configurações</a>
+                <a href="planejamento.html" class="item-menu">Planejamento</a>
+            </nav>
+        </header>
+
+        <main class="conteudo-categorias">
+            <div class="cabecalho-secao">
+                <h2>Gerenciar Categorias</h2>
+                <p>Organize suas receitas e despesas por categorias</p>
+            </div>
+
+            <div class="controles-pagina">
+                <button class="btn btn-primario" id="btnNovaCategoria">
+                    Nova Categoria
+                </button>
+            </div>
+
+            <div class="lista-categorias" id="listaCategorias">
+                <!-- As categorias serão carregadas dinamicamente do Firebase -->
+            </div>
+        </main>
+
+        <div class="modal" id="modalCategoria">
+            <div class="conteudo-modal">
+                <div class="topo-modal">
+                    <h3>Nova Categoria</h3>
+                    <button class="btn-fechar" id="fecharModal">×</button>
+                </div>
+                <form class="form-modal" id="formCategoria">
+                    <div class="campo-form">
+                        <label for="inputNome" class="texto-label">Nome da Categoria:</label>
+                        <input type="text" id="inputNome" class="input-campo" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="selectTipo" class="texto-label">Tipo:</label>
+                        <select id="selectTipo" class="input-campo" required>
+                            <option value="despesa">Despesa</option>
+                            <option value="receita">Receita</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputCor" class="texto-label">Cor:</label>
+                        <input type="color" id="inputCor" class="input-cor" value="#667eea">
+                    </div>
+                    
+                    <div class="botoes-modal">
+                        <button type="button" class="btn btn-secundario" id="cancelarModal">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primario">
+                            Criar Categoria
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script type="module" src="js/firebase-config.js"></script>
+<script type="module" src="js/categorias.js"></script
+
+</body>
+</html>

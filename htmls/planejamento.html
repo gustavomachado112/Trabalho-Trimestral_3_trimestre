@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento - Financia Fácil</title>
+    <link rel="stylesheet" href="css/planejamento.css">
+</head>
+<body>
+    <div class="pagina-planejamento">
+        <header class="topo-pagina">
+            <div class="logo-pagina">
+                <h1>Financia Fácil</h1>
+            </div>
+            <nav class="menu-pagina">
+                <a href="paginainicial.html" class="item-menu">Início</a>
+                <a href="transacoes.html" class="item-menu">Transações</a>
+                <a href="orcamentos.html" class="item-menu">Orçamentos</a>
+                <a href="projecoes.html" class="item-menu">Projeções</a>
+                <a href="relatorios.html" class="item-menu">Relatórios</a>
+                <a href="metas.html" class="item-menu">Metas</a>
+                <a href="contas.html" class="item-menu">Contas</a>
+                <a href="economias.html" class="item-menu">Economia</a>
+                <a href="duvidas.html" class="item-menu">Dúvidas</a>
+                <a href="analise-gastos.html" class="item-menu">Gastos</a>
+                <a href="categorias.html" class="item-menu">Categorias</a>
+                <a href="configuracoes.html" class="item-menu">Configurações</a>
+                <a href="planejamento.html" class="item-menu ativo">Planejamento</a>
+            </nav>
+        </header>
+
+        <main class="conteudo-planejamento">
+            <div class="cabecalho-secao">
+                <h2>Planejamento Financeiro</h2>
+                <p>Planeje suas finanças para os próximos meses</p>
+            </div>
+
+            <div class="controles-pagina">
+                <button class="btn btn-primario" id="btnNovoPlanejamento">
+                    Novo Planejamento
+                </button>
+            </div>
+
+            <div class="resumo-geral">
+                <div class="card-resumo grande">
+                    <h3>Previsão de Saldo</h3>
+                    <p class="valor-destaque" id="previsaoSaldo">R$ 0,00</p>
+                    <span class="texto-secundario" id="variacaoSaldo"></span>
+                </div>
+            </div>
+
+            <div class="grade-dados">
+                <div class="coluna-dados">
+                    <h3>Receitas Previstas</h3>
+                    <div class="lista-itens" id="listaReceitas">
+                    </div>
+                    <div class="total-linha">
+                        <span>Total Receitas:</span>
+                        <span class="valor-total" id="totalReceitas">R$ 0,00</span>
+                    </div>
+                </div>
+
+                <div class="coluna-dados">
+                    <h3>Despesas Previstas</h3>
+                    <div class="lista-itens" id="listaDespesas">
+                    </div>
+                    <div class="total-linha">
+                        <span>Total Despesas:</span>
+                        <span class="valor-total" id="totalDespesas">R$ 0,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metricas-finais">
+                <div class="card-metrica">
+                    <h3>Saldo Previsto</h3>
+                    <p class="valor-destaque" id="saldoPrevisto">R$ 0,00</p>
+                    <span class="texto-secundario">Para economias</span>
+                </div>
+                <div class="card-metrica">
+                    <h3>Meta de Economia</h3>
+                    <div class="barra-progresso">
+                        <div class="progresso" id="progressoMeta" style="width: 0%"></div>
+                    </div>
+                    <span class="texto-secundario" id="textoMeta">0% da meta</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+<script type="module" src="js/planejamento.js"></script>
+
+</body>
+</html>

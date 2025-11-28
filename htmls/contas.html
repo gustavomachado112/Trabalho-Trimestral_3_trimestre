@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas - Financia Fácil</title>
+    <link rel="stylesheet" href="css/contas.css">
+</head>
+<body>
+    <div class="pagina-contas">
+        <header class="topo-pagina">
+            <div class="logo-pagina">
+                <h1>Financia Fácil</h1>
+            </div>
+            <nav class="menu-pagina">
+                <a href="paginainicial.html" class="item-menu">Início</a>
+                <a href="transacoes.html" class="item-menu">Transações</a>
+                <a href="orcamentos.html" class="item-menu">Orçamentos</a>
+                <a href="projecoes.html" class="item-menu">Projeções</a>
+                <a href="relatorios.html" class="item-menu">Relatórios</a>
+                <a href="metas.html" class="item-menu">Metas</a>
+                <a href="contas.html" class="item-menu ativo">Contas</a>
+                <a href="economias.html" class="item-menu">Economia</a>
+                <a href="duvidas.html" class="item-menu">Dúvidas</a>
+                <a href="analise-gastos.html" class="item-menu">Gastos</a>
+                <a href="categorias.html" class="item-menu">Categorias</a>
+                <a href="configuracoes.html" class="item-menu">Configurações</a>
+                <a href="planejamento.html" class="item-menu">Planejamento</a>
+            </nav>
+        </header>
+
+        <main class="conteudo-contas">
+            <div class="cabecalho-secao">
+                <h2>Contas Bancárias</h2>
+                <p>Gerencie suas contas e acompanhe os saldos</p>
+            </div>
+
+            <div class="resumo-geral">
+                <div class="card-resumo">
+                    <h3>Saldo Total</h3>
+                    <p class="valor-destaque" id="saldoTotal">R$ 0,00</p>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Receitas do Mês</h3>
+                    <p class="valor-destaque" id="receitasMes">R$ 0,00</p>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Despesas do Mês</h3>
+                    <p class="valor-destaque" id="despesasMes">R$ 0,00</p>
+                </div>
+            </div>
+
+            <div class="controles-pagina">
+                <button class="btn btn-primario" id="btnNovaConta">
+                    Nova Conta
+                </button>
+            </div>
+
+            <div class="lista-contas" id="listaContas">
+                <!-- As contas serão carregadas dinamicamente aqui -->
+            </div>
+        </main>
+
+        <div class="modal" id="modalConta">
+            <div class="conteudo-modal">
+                <div class="topo-modal">
+                    <h3>Nova Conta</h3>
+                    <button class="btn-fechar" id="fecharModal">×</button>
+                </div>
+                <form class="form-modal" id="formConta">
+                    <div class="campo-form">
+                        <label for="inputNomeConta" class="texto-label">Nome da Conta:</label>
+                        <input type="text" id="inputNomeConta" class="input-campo" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="selectTipoConta" class="texto-label">Tipo de Conta:</label>
+                        <select id="selectTipoConta" class="input-campo" required>
+                            <option value="corrente">Conta Corrente</option>
+                            <option value="poupanca">Poupança</option>
+                            <option value="investimento">Conta Investimento</option>
+                            <option value="carteira">Carteira</option>
+                            <option value="salario">Conta Salário</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputBanco" class="texto-label">Instituição Bancária:</label>
+                        <input type="text" id="inputBanco" class="input-campo">
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputAgencia" class="texto-label">Agência:</label>
+                        <input type="text" id="inputAgencia" class="input-campo">
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputNumeroConta" class="texto-label">Número da Conta:</label>
+                        <input type="text" id="inputNumeroConta" class="input-campo">
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputSaldoInicial" class="texto-label">Saldo Inicial:</label>
+                        <input type="number" id="inputSaldoInicial" class="input-campo" step="0.01" value="0">
+                    </div>
+                    
+                    <div class="botoes-modal">
+                        <button type="button" class="btn btn-secundario" id="cancelarModal">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primario">
+                            Criar Conta
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  <script type="module" src="js/contas.js"></script>
+
+</body>
+</html>

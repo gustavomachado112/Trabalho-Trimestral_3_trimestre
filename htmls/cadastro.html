@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Financia Fácil</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+
+    <div class="pagina-cadastro">
+        <div class="card-cadastro">
+            <div class="topo-form">
+                <h1 class="titulo-form">Criar Conta</h1>
+                <p class="texto-apoio">Junte-se ao Financia Fácil</p>
+            </div>
+            
+            <form class="form-cadastro" id="formCadastro">
+                <div class="linha-campo">
+                    <label for="inputNome" class="texto-campo">Nome Completo:</label>
+                    <input type="text" id="inputNome" class="campo-input" required>
+                </div>
+                
+                <div class="linha-campo">
+                    <label for="inputEmailCadastro" class="texto-campo">Email:</label>
+                    <input type="email" id="inputEmailCadastro" class="campo-input" required>
+                </div>
+                
+                <div class="linha-campo">
+                    <label for="inputSenhaCadastro" class="texto-campo">Senha:</label>
+                    <input type="password" id="inputSenhaCadastro" class="campo-input" required>
+                </div>
+                
+                <div class="linha-campo">
+                    <label for="inputConfirmarSenha" class="texto-campo">Confirmar Senha:</label>
+                    <input type="password" id="inputConfirmarSenha" class="campo-input" required>
+                </div>
+                
+                <button type="submit" class="btn btn-cadastrar">
+                    Criar Minha Conta
+                </button>
+            </form>
+            
+            <div class="rodape-form">
+                <a href="index.html" class="link-acesso">Voltar para o Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/cadastro.js"></script>
+
+</body>
+</html>

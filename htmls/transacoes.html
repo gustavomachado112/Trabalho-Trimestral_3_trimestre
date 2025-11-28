@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações - Financia Fácil</title>
+    <link rel="stylesheet" href="css/transacoes.css">
+</head>
+<body>
+    <div class="pagina-transacoes">
+        <header class="topo-pagina">
+            <div class="logo-pagina">
+                <h1>Financia Fácil</h1>
+            </div>
+            <nav class="menu-pagina">
+                <a href="paginainicial.html" class="item-menu">Início</a>
+                <a href="transacoes.html" class="item-menu ativo">Transações</a>
+                <a href="orcamentos.html" class="item-menu">Orçamentos</a>
+                <a href="projecoes.html" class="item-menu">Projeções</a>
+                <a href="relatorios.html" class="item-menu">Relatórios</a>
+                <a href="metas.html" class="item-menu">Metas</a>
+                <a href="contas.html" class="item-menu">Contas</a>
+                <a href="economias.html" class="item-menu">Economia</a>
+                <a href="duvidas.html" class="item-menu">Dúvidas</a>
+                <a href="analise-gastos.html" class="item-menu">Gastos</a>
+                <a href="categorias.html" class="item-menu">Categorias</a>
+                <a href="configuracoes.html" class="item-menu">Configurações</a>
+                <a href="planejamento.html" class="item-menu">Planejamento</a>
+            </nav>
+        </header>
+
+        <main class="conteudo-transacoes">
+            <div class="cabecalho-secao">
+                <h2>Transações Financeiras</h2>
+                <p>Gerencie suas receitas e despesas</p>
+            </div>
+
+            <div class="resumo-financeiro">
+                <div class="card-resumo">
+                    <h3>Saldo do Mês</h3>
+                    <p class="valor-numero" id="saldoMes">R$ 0,00</p>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Receitas</h3>
+                    <p class="valor-numero" id="totalReceitas">R$ 0,00</p>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Despesas</h3>
+                    <p class="valor-numero" id="totalDespesas">R$ 0,00</p>
+                </div>
+            </div>
+
+            <div class="controles-lista">
+                <button class="btn btn-primario" id="btnNovaTransacao">
+                    Nova Transação
+                </button>
+            </div>
+
+            <div class="lista-dados">
+                <div class="cabecalho-lista">
+                    <span>Data</span>
+                    <span>Descrição</span>
+                    <span>Categoria</span>
+                    <span>Valor</span>
+                    <span>Ações</span>
+                </div>
+
+                <div id="listaTransacoes">
+                    <!-- Transações serão carregadas via JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <div class="modal" id="modalTransacao">
+            <div class="conteudo-modal">
+                <div class="topo-modal">
+                    <h3>Nova Transação</h3>
+                    <button class="btn-fechar" id="fecharModal">×</button>
+                </div>
+                <form class="form-modal" id="formTransacao">
+                    <div class="campo-form">
+                        <label class="texto-label">Tipo:</label>
+                        <div class="grupo-radio">
+                            <label class="label-radio">
+                                <input type="radio" name="tipoTransacao" value="receita" checked>
+                                Receita
+                            </label>
+                            <label class="label-radio">
+                                <input type="radio" name="tipoTransacao" value="despesa">
+                                Despesa
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputDescricao" class="texto-label">Descrição:</label>
+                        <input type="text" id="inputDescricao" class="input-campo" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputValor" class="texto-label">Valor:</label>
+                        <input type="number" id="inputValor" class="input-campo" step="0.01" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputData" class="texto-label">Data:</label>
+                        <input type="date" id="inputData" class="input-campo" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="selectCategoria" class="texto-label">Categoria:</label>
+                        <select id="selectCategoria" class="input-campo" required>
+                            <option value="">Selecione</option>
+                            <option value="alimentacao">Alimentação</option>
+                            <option value="transporte">Transporte</option>
+                            <option value="moradia">Moradia</option>
+                        </select>
+                    </div>
+                    
+                    <div class="botoes-modal">
+                        <button type="button" class="btn btn-secundario" id="cancelarModal">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primario">
+                            Salvar Transação
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/transacoes.js"></script>
+</body>
+</html>
