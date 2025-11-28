@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamentos - Financia Fácil</title>
+    <link rel="stylesheet" href="css/orcamentos.css">
+</head>
+<body>
+    <div class="pagina-orcamentos">
+        <header class="topo-pagina">
+            <div class="logo-pagina">
+                <h1>Financia Fácil</h1>
+            </div>
+            <nav class="menu-pagina">
+                <a href="paginainicial.html" class="item-menu">Início</a>
+                <a href="transacoes.html" class="item-menu">Transações</a>
+                <a href="orcamentos.html" class="item-menu ativo">Orçamentos</a>
+                <a href="projecoes.html" class="item-menu">Projeções</a>
+                <a href="relatorios.html" class="item-menu">Relatórios</a>
+                <a href="metas.html" class="item-menu">Metas</a>
+                <a href="contas.html" class="item-menu">Contas</a>
+                <a href="cartoes.html" class="item-menu">Cartões</a>
+                <a href="investimentos.html" class="item-menu">Investimentos</a>
+                <a href="dividas.html" class="item-menu">Dívidas</a>
+                <a href="categorias.html" class="item-menu">Categorias</a>
+                <a href="configuracoes.html" class="item-menu">Configurações</a>
+            </nav>
+        </header>
+
+        <main class="conteudo-orcamentos">
+            <div class="cabecalho-secao">
+                <h2>Controle de Orçamentos</h2>
+                <p>Planeje e acompanhe seus gastos por categoria</p>
+            </div>
+
+            <div class="resumo-geral">
+                <div class="card-resumo">
+                    <h3>Total Orçado</h3>
+                    <p class="valor-destaque" id="totalOrcado">R$ 0,00</p>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Total Gasto</h3>
+                    <p class="valor-destaque" id="totalGasto">R$ 0,00</p>
+                </div>
+                
+                <div class="card-resumo">
+                    <h3>Restante</h3>
+                    <p class="valor-destaque positivo" id="totalRestante">R$ 0,00</p>
+                </div>
+            </div>
+
+            <div class="controles-pagina">
+                <button class="btn btn-primario" id="btnNovoOrcamento">
+                    Novo Orçamento
+                </button>
+            </div>
+
+            <div class="lista-orcamentos" id="listaOrcamentos">
+            </div>
+        </main>
+
+        <div class="modal" id="modalOrcamento">
+            <div class="conteudo-modal">
+                <div class="topo-modal">
+                    <h3>Novo Orçamento</h3>
+                    <button class="btn-fechar" id="fecharModal">×</button>
+                </div>
+                <form class="form-modal" id="formOrcamento">
+                    <div class="campo-form">
+                        <label for="selectCategoria" class="texto-label">Categoria:</label>
+                        <select id="selectCategoria" class="input-campo" required>
+                            <option value="">Selecione uma categoria</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="inputValorLimite" class="texto-label">Valor Limite:</label>
+                        <input type="number" id="inputValorLimite" class="input-campo" step="0.01" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="selectMes" class="texto-label">Mês de Referência:</label>
+                        <select id="selectMes" class="input-campo" required>
+                            <option value="">Selecione o mês</option>
+                        </select>
+                    </div>
+                    
+                    <div class="botoes-modal">
+                        <button type="button" class="btn btn-secundario" id="cancelarModal">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primario">
+                            Criar Orçamento
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script type="module" src="js/orcamentos.js"></script>
+
+</body>
+</html>

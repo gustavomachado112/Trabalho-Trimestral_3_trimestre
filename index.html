@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financia Fácil - Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="tela-acesso">
+        <section class="card-acesso">
+            <div class="topo-card">
+                <h1 class="logo-sistema">Financia Fácil</h1>
+                <p class="desc-sistema">Controle seu dinheiro de forma simples</p>
+            </div>
+            
+            <form class="form-acesso" id="formLogin">
+                <div class="campo-form">
+                    <label for="inputEmail" class="texto-label">Email:</label>
+                    <input type="email" id="inputEmail" class="area-input" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="inputSenha" class="texto-label">Senha:</label>
+                    <input type="password" id="inputSenha" class="area-input" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primario btn-acessar">
+                    Acessar Sistema
+                </button>
+            </form>
+
+            <div class="divisor">── ou ──</div>
+
+            <a href="cadastro.html" class="btn btn-secundario btn-criar">Criar Nova Conta</a>
+        </section>
+    </main>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>

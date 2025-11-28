@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1f2937;
+}
+
+.pagina-transacoes {
+    min-height: 100vh;
+}
+
+.topo-pagina {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+    color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo-pagina h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.menu-pagina {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.item-menu {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.item-menu:hover,
+.item-menu.ativo {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.conteudo-transacoes {
+    padding: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cabecalho-secao h2 {
+    color: #1f2937;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.cabecalho-secao p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.resumo-financeiro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.card-resumo {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    border-left: 4px solid #3b82f6;
+}
+
+.card-resumo h3 {
+    color: #374151;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.valor-numero {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.valor-numero.positivo {
+    color: #10b981;
+}
+
+.valor-numero.negativo {
+    color: #ef4444;
+}
+
+.controles-lista {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primario {
+    background: #10b981;
+    color: white;
+}
+
+.btn-primario:hover {
+    background: #059669;
+}
+
+.btn-secundario {
+    background: #9ca3af;
+    color: white;
+}
+
+.btn-secundario:hover {
+    background: #6b7280;
+}
+
+.btn-editar {
+    background: #3b82f6;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.btn-excluir {
+    background: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.lista-dados {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.cabecalho-lista {
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 120px 100px;
+    gap: 12px;
+    padding: 18px;
+    background: #f3f4f6;
+    border-bottom: 2px solid #e5e7eb;
+    font-weight: 600;
+    color: #374151;
+    font-size: 13px;
+}
+
+.linha-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 120px 100px;
+    gap: 12px;
+    padding: 18px;
+    border-bottom: 1px solid #e5e7eb;
+    align-items: center;
+}
+
+.linha-item:hover {
+    background: #f3f4f6;
+}
+
+.linha-item.receita {
+    border-left: 4px solid #10b981;
+}
+
+.linha-item.despesa {
+    border-left: 4px solid #ef4444;
+}
+
+.data-item {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-item strong {
+    color: #1f2937;
+    font-size: 15px;
+}
+
+.info-item small {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.categoria-item {
+    color: #374151;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.valor-item {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.valor-item.positivo {
+    color: #10b981;
+}
+
+.valor-item.negativo {
+    color: #ef4444;
+}
+
+.acoes-item {
+    display: flex;
+    gap: 6px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.conteudo-modal {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 450px;
+}
+
+.topo-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.topo-modal h3 {
+    color: #1f2937;
+    font-size: 18px;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.texto-label {
+    color: #374151;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.input-campo {
+    padding: 10px 14px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-campo:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+.grupo-radio {
+    display: flex;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.label-radio {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #374151;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.botoes-modal {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 16px;
+}

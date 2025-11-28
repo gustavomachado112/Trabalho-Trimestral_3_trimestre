@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dúvidas - Financia Fácil</title>
+    <link rel="stylesheet" href="css/duvidas.css">
+</head>
+<body>
+    <div class="pagina-duvidas">
+        <header class="topo-pagina">
+            <div class="logo-pagina">
+                <h1>Financia Fácil</h1>
+            </div>
+            <nav class="menu-pagina">
+                <a href="paginainicial.html" class="item-menu">Início</a>
+                <a href="transacoes.html" class="item-menu">Transações</a>
+                <a href="orcamentos.html" class="item-menu">Orçamentos</a>
+                <a href="projecoes.html" class="item-menu">Projeções</a>
+                <a href="relatorios.html" class="item-menu">Relatórios</a>
+                <a href="metas.html" class="item-menu">Metas</a>
+                <a href="contas.html" class="item-menu">Contas</a>
+                <a href="economias.html" class="item-menu">Economia</a>
+                <a href="duvidas.html" class="item-menu ativo">Dúvidas</a>
+                <a href="analise-gastos.html" class="item-menu">Gastos</a>
+                <a href="categorias.html" class="item-menu">Categorias</a>
+                <a href="configuracoes.html" class="item-menu">Configurações</a>
+                <a href="planejamento.html" class="item-menu">Planejamento</a>
+            </nav>
+        </header>
+
+        <main class="conteudo-duvidas">
+            <div class="cabecalho-secao">
+                <h2>Dúvidas Frequentes</h2>
+                <p>Encontre respostas para as perguntas mais comuns</p>
+            </div>
+
+            <div class="campo-pesquisa">
+                <input type="text" placeholder="Pesquisar dúvidas..." class="input-pesquisa" id="inputPesquisa">
+            </div>
+
+            <div class="categorias-lista">
+                <div class="categoria-item ativa" data-categoria="basico">
+                    <span>Básico</span>
+                </div>
+                <div class="categoria-item" data-categoria="orcamento">
+                    <span>Orçamento</span>
+                </div>
+                <div class="categoria-item" data-categoria="metas">
+                    <span>Metas</span>
+                </div>
+                <div class="categoria-item" data-categoria="relatorios">
+                    <span>Relatórios</span>
+                </div>
+            </div>
+
+            <div class="lista-duvidas">
+                <div class="card-duvida" data-categoria="basico">
+                    <div class="pergunta-duvida">
+                        <h3>Como adicionar minha primeira transação?</h3>
+                        <button class="btn-expandir">+</button>
+                    </div>
+                    <div class="resposta-duvida">
+                        <p>Para adicionar uma transação:</p>
+                        <ol>
+                            <li>Acesse a página "Transações"</li>
+                            <li>Clique no botão "Nova Transação"</li>
+                            <li>Preencha os dados: descrição, valor, data e categoria</li>
+                            <li>Clique em "Salvar Transação"</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card-duvida" data-categoria="orcamento">
+                    <div class="pergunta-duvida">
+                        <h3>Como criar um orçamento mensal?</h3>
+                        <button class="btn-expandir">+</button>
+                    </div>
+                    <div class="resposta-duvida">
+                        <p>Para criar um orçamento:</p>
+                        <ul>
+                            <li>Vá para "Orçamentos"</li>
+                            <li>Clique em "Novo Orçamento"</li>
+                            <li>Selecione a categoria e defina o valor limite</li>
+                            <li>Escolha o mês de referência</li>
+                            <li>Salve e acompanhe o progresso</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-duvida" data-categoria="basico">
+                    <div class="pergunta-duvida">
+                        <h3>Posso alterar uma transação já registrada?</h3>
+                        <button class="btn-expandir">+</button>
+                    </div>
+                    <div class="resposta-duvida">
+                        <p>Sim! Para editar uma transação:</p>
+                        <ul>
+                            <li>Na página "Transações", localize a transação desejada</li>
+                            <li>Clique no botão de editar ao lado da transação</li>
+                            <li>Faça as alterações necessárias</li>
+                            <li>Clique em "Salvar Alterações"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-duvida" data-categoria="metas">
+                    <div class="pergunta-duvida">
+                        <h3>Como definir metas financeiras?</h3>
+                        <button class="btn-expandir">+</button>
+                    </div>
+                    <div class="resposta-duvida">
+                        <p>Para criar metas:</p>
+                        <ol>
+                            <li>Acesse "Metas Financeiras"</li>
+                            <li>Clique em "Nova Meta"</li>
+                            <li>Defina: nome, valor objetivo e prazo</li>
+                            <li>Acompanhe o progresso na barra de evolução</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="secao-contato">
+                <h3>Não encontrou o que procurava?</h3>
+                <div class="opcoes-contato">
+                    <div class="opcao-contato">
+                        <div class="info-contato">
+                            <strong>Envie um email</strong>
+                            <small>suporte@financiafacil.com</small>
+                        </div>
+                    </div>
+                    <div class="opcao-contato">
+                        <div class="info-contato">
+                            <strong>Chat online</strong>
+                            <small>Disponível 24/7</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<script type="module" src="js/duvidas.js"></script>
+
+</body>
+</html>
